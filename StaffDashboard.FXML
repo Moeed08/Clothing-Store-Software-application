@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.staffDashboardController">
+   <children>
+      <AnchorPane prefHeight="79.0" prefWidth="882.0" style="-fx-background-color: #0a1733;">
+         <children>
+            <Label layoutX="20.0" layoutY="31.0" prefHeight="28.0" prefWidth="170.0" text="Staff Dashboard" textFill="#e6e4e4">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="17.0" prefHeight="45.0" prefWidth="345.0" text="Inventory Management" textFill="#fbff00">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="579.0" layoutY="31.0" prefHeight="28.0" prefWidth="188.0" text="Welcome, Staff" textFill="#e6e4e4">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-4.0" layoutY="78.0" prefHeight="368.0" prefWidth="332.0" style="-fx-background-color: #4373e6;">
+         <children>
+            <Button fx:id="addBtn" layoutX="30.0" layoutY="318.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #09113b;" text="Add" textFill="#ede9e9">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <TextField fx:id="name" layoutX="56.0" layoutY="23.0" prefHeight="45.0" prefWidth="219.0" promptText="Name" />
+            <TextField fx:id="itemID" layoutX="56.0" layoutY="77.0" prefHeight="45.0" prefWidth="219.0" promptText="Item ID" />
+            <TextField fx:id="category" layoutX="56.0" layoutY="135.0" prefHeight="45.0" prefWidth="219.0" promptText="Category" />
+            <TextField fx:id="price" layoutX="56.0" layoutY="191.0" prefHeight="45.0" prefWidth="219.0" promptText="Price" />
+            <TextField fx:id="count" layoutX="56.0" layoutY="254.0" prefHeight="45.0" prefWidth="219.0" promptText="Quantity" />
+            <Button fx:id="updateBtn" layoutX="182.0" layoutY="318.0" mnemonicParsing="false" onAction="#updateItem" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #09113b;" text="Update" textFill="#f6f4f4">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="328.0" layoutY="79.0" prefHeight="432.0" prefWidth="554.0" style="-fx-background-color: #000000;">
+         <children>
+            <TextField fx:id="delete_itemID" layoutX="118.0" layoutY="339.0" prefHeight="25.0" prefWidth="227.0" promptText="Item ID" />
+            <Button fx:id="findBtn" layoutX="80.0" layoutY="381.0" mnemonicParsing="false" onAction="#findItem" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: #e6db43;" text="Find" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteBtn" layoutX="288.0" layoutY="381.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #e6db43;" text="Delete" textFill="#121212">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="account_refreshBtn" layoutX="14.0" layoutY="388.0" mnemonicParsing="false" onAction="#refreshItemTable" style="-fx-background-color: #e6db43;" text="Refresh" />
+            <TableView fx:id="itemTable" prefHeight="327.0" prefWidth="554.0">
+              <columns>
+                <TableColumn fx:id="itemIdColumn" prefWidth="75.0" text="Item ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="149.33331298828125" text="Name" />
+                  <TableColumn fx:id="categoryColumn" prefWidth="118.0" text="Category" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="118.0" text="Quantity" />
+                  <TableColumn fx:id="priceColumn" prefWidth="118.0" text="Price" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="signoutBtn" layoutX="14.0" layoutY="460.0" mnemonicParsing="false" onAction="#signOut" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #09113b;" text="Sign out" textFill="#ede9e9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
